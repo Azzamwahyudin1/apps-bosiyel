@@ -6,6 +6,7 @@ import { QuickLinks } from "./components/sections/QuickLinks";
 import { PartnerResmi } from "./components/sections/PartnerResmi";
 import { AboutBosIyel } from "./components/sections/AboutBosIyel";
 
+
 function App() {
   return (
     <div className="min-h-screen relative overflow-hidden flex flex-col justify-between">
