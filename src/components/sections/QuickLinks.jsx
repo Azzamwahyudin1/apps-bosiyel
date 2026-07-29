@@ -1,7 +1,7 @@
 import React from "react";
 import { SectionWrapper } from "../ui/SectionWrapper";
 import { Button } from "../ui/Button";
-import { SOCIAL_LINKS } from "../../constants/links";
+import { SOCIAL_LINKS } from "../../constant/links";
 import { FaWhatsapp, FaInstagram, FaUsers, FaBullhorn } from "react-icons/fa";
 
 export const QuickLinks = () => {

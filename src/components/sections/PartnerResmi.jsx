@@ -1,6 +1,6 @@
 import React from "react";
 import { SectionWrapper } from "../ui/SectionWrapper";
-import { PARTNER_DATA } from "../../constants/links";
+import { PARTNER_DATA } from "../../constant/links";
 
 export const PartnerResmi = () => {
   return (

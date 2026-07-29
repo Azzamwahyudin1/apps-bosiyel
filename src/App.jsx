@@ -1,6 +1,6 @@
 import React from "react";
-import { Navbar } from "./components/layout/Navbar";
-import { Footer } from "./components/layout/Footer";
+import { Navbar } from "./components/layouts/Navbar";
+import { Footer } from "./components/layouts/Footer";
 import { HeroBanner } from "./components/sections/HeroBanner";
 import { QuickLinks } from "./components/sections/QuickLinks";
 import { PartnerResmi } from "./components/sections/PartnerResmi";

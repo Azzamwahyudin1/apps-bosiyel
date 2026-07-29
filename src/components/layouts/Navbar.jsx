@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
-import logoImg from "../../assets/images/logo-bosiyel.png";
+import logoImg from "../../assets/hero.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

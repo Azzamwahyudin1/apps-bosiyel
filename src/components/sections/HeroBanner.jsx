@@ -1,7 +1,7 @@
 import React from "react";
 import { SectionWrapper } from "../ui/SectionWrapper";
-import characterHero from "../../assets/images/character-hero.png";
-import { HERO_CTA } from "../../constants/links";
+import { HERO_CTA } from "../../constant/links";
+import characterHero from "../../assets/hero.png";
 
 // Komponen Banner Utama dengan layout persis seperti contoh gambar
 export const HeroBanner = () => {

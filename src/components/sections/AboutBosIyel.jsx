@@ -1,8 +1,7 @@
 import React from "react";
 import { SectionWrapper } from "../ui/SectionWrapper";
 import { Button } from "../ui/Button";
-import { SOCIAL_LINKS } from "../../constants/links";
-import characterAbout from "../../assets/images/character-about.png";
+import { SOCIAL_LINKS } from "../../constant/links";
 
 export const AboutBosIyel = () => {
   return (
@@ -14,11 +13,6 @@ export const AboutBosIyel = () => {
           <br />
           Iyel..?
         </h2>
-        <img
-          src={characterAbout}
-          alt="Bos Iyel Character"
-          className="w-24 md:w-36 h-auto object-contain -mt-2"
-        />
       </div>
 
       {/* Paragraf Deskripsi */}

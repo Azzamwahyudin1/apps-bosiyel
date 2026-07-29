@@ -12,7 +12,7 @@ export const PARTNER_DATA = [
     id: 1,
     name: "ABAN STORE",
     tag: "PARTNER RESMI IYEL",
-    image: "/src/assets/images/partner-abanstore-logo.png",
+    image: "/src/assets/hero.png",
     contactLink: "https://wa.me/6288976121102",
   },
 ];
