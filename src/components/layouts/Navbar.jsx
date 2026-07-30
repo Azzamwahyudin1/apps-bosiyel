@@ -1,21 +1,31 @@
-import React, { useState } from "react";
-import { FiSearch, FiMenu, FiX } from "react-icons/fi";
-import logoImg from "../../assets/hero.png";
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiSearch, FiMenu, FiX } from 'react-icons/fi';
+import logoImg from '../../assets/logo bos iyel.png';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#0A1128]/90 backdrop-blur-md border-b border-white/10 py-3 px-4">
+    <motion.nav
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="sticky top-0 z-50 bg-[#0A1128]/90 backdrop-blur-md border-b border-white/10 py-3 px-4"
+    >
       <div className="max-w-md md:max-w-2xl lg:max-w-5xl mx-auto flex items-center justify-between gap-3">
-        {/* Logo Bulat */}
-        <div className="flex items-center gap-2 shrink-0">
+        {/* Logo Bulat dengan efek hover rotate/scale */}
+        <motion.div
+          whileHover={{ scale: 1.08, rotate: 5 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center gap-2 shrink-0 cursor-pointer"
+        >
           <img
             src={logoImg}
             alt="Logo BOS IYEL"
             className="w-12 h-12 rounded-full border-2 border-cyan-400 object-cover shadow-lg"
           />
-        </div>
+        </motion.div>
 
         {/* Search Bar */}
         <div className="flex-1 max-w-xs md:max-w-md relative">
@@ -30,41 +40,34 @@ export const Navbar = () => {
         </div>
 
         {/* Hamburger Menu Button */}
-        <button
+        <motion.button
+          whileTap={{ scale: 0.85 }}
           onClick={() => setIsOpen(!isOpen)}
           className="text-white text-2xl p-1 rounded-lg hover:bg-white/10 focus:outline-none"
           aria-label="Toggle Navigation"
         >
           {isOpen ? <FiX /> : <FiMenu />}
-        </button>
+        </motion.button>
       </div>
 
-      {/* Mobile Drawer Menu */}
-      {isOpen && (
-        <div className="mt-3 bg-[#0F1A3E] border-t border-white/10 py-4 px-6 flex flex-col gap-3 font-protest animate-fadeIn">
-          <a
-            href="#quick-links"
-            className="hover:text-cyan-400 py-1"
-            onClick={() => setIsOpen(false)}
+      {/* Mobile Drawer Menu dengan AnimatePresence */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden bg-[#0F1A3E] border-t border-white/10 mt-3 font-protest"
           >
-            Quick Links
-          </a>
-          <a
-            href="#partner-section"
-            className="hover:text-cyan-400 py-1"
-            onClick={() => setIsOpen(false)}
-          >
-            Partner Resmi
-          </a>
-          <a
-            href="#about-section"
-            className="hover:text-cyan-400 py-1"
-            onClick={() => setIsOpen(false)}
-          >
-            Who Bos Iyel
-          </a>
-        </div>
-      )}
-    </nav>
+            <div className="py-4 px-6 flex flex-col gap-3">
+              <a href="#quick-links" className="hover:text-cyan-400 py-1" onClick={() => setIsOpen(false)}>Quick Links</a>
+              <a href="#partner-section" className="hover:text-cyan-400 py-1" onClick={() => setIsOpen(false)}>Partner Resmi</a>
+              <a href="#about-section" className="hover:text-cyan-400 py-1" onClick={() => setIsOpen(false)}>Who Bos Iyel</a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 };

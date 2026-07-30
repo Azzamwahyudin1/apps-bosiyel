@@ -1,25 +1,25 @@
-import React from "react";
+import React from 'react';
+import { motion } from 'framer-motion';
 
-export const Button = ({ 
-  children, 
-  className = "", 
-  variant = "default",
-  ...props 
-}) => {
-  const baseStyles = "rounded-2xl font-protest transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0A1128]";
+export const Button = ({ children, onClick, className = '', variant = 'primary', ...props }) => {
+  const baseStyles = "font-protest tracking-wider uppercase shadow-md flex items-center justify-center gap-2 cursor-pointer";
   
   const variants = {
-    default: "bg-slate-200 text-slate-900 hover:bg-white hover:scale-105",
-    cyan: "bg-cyan-500 text-white hover:bg-cyan-400 hover:scale-105 shadow-[0_0_15px_rgba(6,182,212,0.4)]",
-    outline: "bg-transparent border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"
+    primary: "bg-[#38BDF8] text-white shadow-[0_0_15px_rgba(56,189,248,0.3)]",
+    secondary: "bg-[#1E293B] text-white border border-slate-700",
+    cyan: "bg-cyan-400 text-slate-900 font-bold"
   };
 
   return (
-    <button 
+    <motion.button
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.96 }}
+      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      onClick={onClick}
       className={`${baseStyles} ${variants[variant]} ${className}`}
       {...props}
     >
       {children}
-    </button>
+    </motion.button>
   );
 };
