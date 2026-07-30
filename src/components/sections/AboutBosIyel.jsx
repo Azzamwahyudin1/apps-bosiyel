@@ -10,20 +10,20 @@ export const AboutBosIyel = () => {
     <SectionWrapper id="about-section" className="mt-8">
       {/* Title & Karakter Ilustrasi */}
       <div className="flex items-start justify-between mb-4">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-5xl font-protest leading-tight tracking-wider text-white"
         >
-          Who Bos<br />Iyel..?
+          Who Bos<br />Iyel...?
         </motion.h2>
 
         {/* Karakter dengan efek melayang berulang */}
-        <motion.img 
-          src={characterAbout} 
-          alt="Bos Iyel Character" 
+        <motion.img
+          src={characterAbout}
+          alt="Bos Iyel Character"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -40,7 +40,7 @@ export const AboutBosIyel = () => {
       </div>
 
       {/* Paragraf Deskripsi */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -53,20 +53,39 @@ export const AboutBosIyel = () => {
       </motion.div>
 
       {/* Tombol ALL MEDSOS */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+      <motion.a
+        href={SOCIAL_LINKS.allMedsos}
+        target="_blank"
+        rel="noreferrer"
+        className="block w-full"
+        animate={{
+          boxShadow: [
+            "0px 0px 15px rgba(56, 189, 248, 0.4)",
+            "0px 0px 30px rgba(56, 189, 248, 0.8)",
+            "0px 0px 15px rgba(56, 189, 248, 0.4)"
+          ]
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        style={{ borderRadius: '1rem' }}
       >
-        <a href={SOCIAL_LINKS.allMedsos} target="_blank" rel="noreferrer">
-          <Button 
-            className="w-full py-4 text-lg md:text-xl rounded-2xl bg-slate-200 text-slate-900 hover:bg-white tracking-wider font-protest shadow-lg"
-          >
+        <Button
+          className="relative w-full py-4 text-lg md:text-xl rounded-2xl 
+               bg-gradient-to-r from-sky-400 via-blue-600 to-blue-800 
+               text-white font-protest tracking-widest uppercase
+               border border-sky-300/50 overflow-hidden group"
+        >
+          {/* Efek Kilasan Cahaya */}
+          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
+
+          <span className="relative z-10 drop-shadow-md">
             ALL MEDSOS BOS IYEL
-          </Button>
-        </a>
-      </motion.div>
+          </span>
+        </Button>
+      </motion.a>
     </SectionWrapper>
   );
 };
