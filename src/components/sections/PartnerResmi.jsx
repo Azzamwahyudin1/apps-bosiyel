@@ -14,9 +14,9 @@ export const PartnerResmi = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-6"
       >
-        <h2 className="text-2xl md:text-4xl font-protest tracking-wider">
-          <span className="text-cyan-400">PATNER RESMI </span>
-          <span className="text-white">BOS IYEL</span>
+        <h2 className="text-5xl font-extrabold bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-600 bg-clip-text text-transparent">
+          <span className='text-cyan-400'>Partener</span>
+          <span className='text-white'> Bos Iyel</span>
         </h2>
       </motion.div>
 
