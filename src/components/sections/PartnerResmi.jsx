@@ -21,7 +21,7 @@ export const PartnerResmi = () => {
       >
         {/* Judul Section */}
         <h2 className="text-xl md:text-3xl font-protest tracking-wider">
-          <span className="text-cyan-400">PARTNER RESMI </span>
+          <span className="text-cyan-400">PATNER RESMI </span>
           <span className="text-white">BOS IYEL</span>
         </h2>
 

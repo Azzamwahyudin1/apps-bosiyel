@@ -52,7 +52,7 @@ export const AllPartnersPage = () => {
                         className="mb-8"
                     >
                         <h1 className="text-2xl md:text-4xl font-protest tracking-wider">
-                            <span className="text-cyan-400">SEMUA PARTNER RESMI </span>
+                            <span className="text-cyan-400">SEMUA PATNER RESMI </span>
                             <span className="text-white">BOS IYEL</span>
                         </h1>
                         <p className="text-xs md:text-sm text-cyan-300/80 font-protest tracking-wide mt-1 uppercase">
