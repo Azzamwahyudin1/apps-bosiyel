@@ -20,7 +20,7 @@ export const AboutBosIyel = () => {
           Who Bos<br />Iyel...?
         </motion.h2>
 
-        {/* Karakter dengan efek melayang berulang */}
+        {/* Karakter dengan efek melayang berulang - Ukuran Lebih Besar */}
         <motion.img
           src={characterAbout}
           alt="Bos Iyel Character"
@@ -35,7 +35,7 @@ export const AboutBosIyel = () => {
             rotate: { duration: 4, repeat: Infinity, ease: "easeInOut" },
             y: { duration: 2.5, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="w-24 md:w-36 h-auto object-contain -mt-2"
+          className="w-32 md:w-48 lg:w-56 h-auto object-contain -mt-4 drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]"
         />
       </div>
 
