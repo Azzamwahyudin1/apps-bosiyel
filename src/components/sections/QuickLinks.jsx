@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { use } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../ui/SectionWrapper';
 import { Button } from '../ui/Button';
 import { SOCIAL_LINKS } from '../../constant/links';
 import { FaWhatsapp, FaInstagram, FaUsers, FaBullhorn } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { FaTiktok } from 'react-icons/fa';
 
 export const QuickLinks = () => {
   const containerVariants = {
@@ -19,6 +21,12 @@ export const QuickLinks = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } }
+  };
+
+  const navigate = useNavigate();
+
+  const onClick = () => {
+    navigate("/partner");
   };
 
   return (
@@ -91,7 +99,7 @@ export const QuickLinks = () => {
         </motion.a>
 
         {/* 4. Group Bos Iyel */}
-        <motion.a variants={itemVariants} href={SOCIAL_LINKS.groupBosIyel} target="_blank" rel="noreferrer" className="block">
+        <motion.a variants={itemVariants} href={SOCIAL_LINKS.tiktok} target="_blank" rel="noreferrer" className="block">
           <Button
             className="relative w-full py-3.5 px-3 rounded-2xl text-xs md:text-sm 
                        bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-700 
@@ -104,8 +112,8 @@ export const QuickLinks = () => {
           >
             <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
             <span className="relative z-10 flex items-center justify-between w-full">
-              <span>Group bos iyel</span>
-              <FaUsers className="text-lg text-cyan-300" />
+              <span>Tiktok Bos Iyel</span>
+              <FaTiktok className="text-lg text-cyan-300" />
             </span>
           </Button>
         </motion.a>
@@ -126,7 +134,7 @@ export const QuickLinks = () => {
         }}
         className="mt-4 rounded-2xl"
       >
-        <a href={SOCIAL_LINKS.partnerButton} className="block w-full">
+        <a onClick={() => navigate("/partner")} className="block w-full">
           <Button
             className="relative w-full py-4 text-base md:text-xl rounded-2xl 
                        bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 

@@ -5,6 +5,7 @@ import logoImg from '../../assets/logo bos iyel.png';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   return (
     <motion.nav
@@ -27,7 +28,7 @@ export const Navbar = () => {
           />
         </motion.div>
 
-        {/* Search Bar dengan Efek Glow & Focus Motion */}
+        {/* Search Bar */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -36,18 +37,28 @@ export const Navbar = () => {
         >
           <div
             className="flex items-center bg-slate-900/90 border border-slate-700/80 rounded-full px-3.5 py-1.5 
-               transition-all duration-300 ease-out
-               group-hover:border-cyan-400/60 group-hover:shadow-[0_0_15px_rgba(56,189,248,0.25)]
-               focus-within:border-cyan-400 focus-within:shadow-[0_0_20px_rgba(56,189,248,0.5)] focus-within:bg-slate-950"
+                   transition-all duration-300 ease-out
+                   group-hover:border-cyan-400/60 group-hover:shadow-[0_0_15px_rgba(56,189,248,0.25)]
+                   focus-within:border-cyan-400 focus-within:shadow-[0_0_20px_rgba(56,189,248,0.5)] focus-within:bg-slate-950"
           >
-            {/* Ikon Search yang berubah warna saat diklik/fokus */}
             <FiSearch className="text-gray-400 text-lg mr-2 shrink-0 transition-colors duration-300 group-focus-within:text-cyan-400 group-hover:text-cyan-300" />
 
             <input
               type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Mau cari apa ?"
               className="bg-transparent text-sm text-white placeholder-gray-400 focus:outline-none w-full font-sans tracking-wide"
             />
+
+            {searchTerm && (
+              <button
+                onClick={() => setSearchTerm('')}
+                className="text-gray-400 hover:text-white transition-colors duration-200 ml-1"
+              >
+                <FiX className="text-base" />
+              </button>
+            )}
           </div>
         </motion.div>
 
@@ -83,9 +94,9 @@ export const Navbar = () => {
               className="py-4 px-5 flex flex-col gap-2"
             >
               {[
-                { href: "#quick-links", label: "Quick Links" },
-                { href: "#partner-section", label: "Partner Resmi" },
-                { href: "#about-section", label: "Who Bos Iyel" },
+                { href: "#quick-links", label: "Kontak Bos Iyel" },
+                { href: "#", label: "Partner Resmi Bos Iyel" },
+                { href: "#about-section", label: "Tentang Bos Iyel" },
               ].map((item, idx) => (
                 <motion.a
                   key={idx}

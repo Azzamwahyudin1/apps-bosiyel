@@ -1,30 +1,19 @@
-import React from "react";
-import { Navbar } from "./components/layouts/Navbar";
-import { Footer } from "./components/layouts/Footer";
-import { HeroBanner } from "./components/sections/HeroBanner";
-import { QuickLinks } from "./components/sections/QuickLinks";
-import { PartnerResmi } from "./components/sections/PartnerResmi";
-import { AboutBosIyel } from "./components/sections/AboutBosIyel";
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { LandingPage } from './pages/LandingPage';
+import { AllPartnersPage } from './pages/AllPartnersPage';
 
 function App() {
   return (
-    <div className="min-h-screen relative overflow-hidden flex flex-col justify-between">
-      {/* Glow Blur Effect pada background */}
-      <div className="bg-glow-top" />
-
-      <div>
-        <Navbar />
-        <main>
-          <HeroBanner />
-          <QuickLinks />
-          <PartnerResmi />
-          <AboutBosIyel />
-        </main>
-      </div>
-
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        {/* Route Halaman Utama */}
+        <Route path="/" element={<LandingPage />} />
+        
+        {/* Route Halaman Semua Partner */}
+        <Route path="/partner" element={<AllPartnersPage />} />
+      </Routes>
+    </Router>
   );
 }
 
