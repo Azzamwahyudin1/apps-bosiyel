@@ -27,17 +27,29 @@ export const Navbar = () => {
           />
         </motion.div>
 
-        {/* Search Bar */}
-        <div className="flex-1 max-w-xs md:max-w-md relative">
-          <div className="flex items-center bg-slate-900/80 border border-slate-600 rounded-full px-3 py-1.5 focus-within:border-cyan-400 transition">
-            <FiSearch className="text-gray-400 text-lg mr-2 shrink-0" />
+        {/* Search Bar dengan Efek Glow & Focus Motion */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="flex-1 max-w-xs md:max-w-md relative group"
+        >
+          <div
+            className="flex items-center bg-slate-900/90 border border-slate-700/80 rounded-full px-3.5 py-1.5 
+               transition-all duration-300 ease-out
+               group-hover:border-cyan-400/60 group-hover:shadow-[0_0_15px_rgba(56,189,248,0.25)]
+               focus-within:border-cyan-400 focus-within:shadow-[0_0_20px_rgba(56,189,248,0.5)] focus-within:bg-slate-950"
+          >
+            {/* Ikon Search yang berubah warna saat diklik/fokus */}
+            <FiSearch className="text-gray-400 text-lg mr-2 shrink-0 transition-colors duration-300 group-focus-within:text-cyan-400 group-hover:text-cyan-300" />
+
             <input
               type="text"
               placeholder="Mau cari apa ?"
-              className="bg-transparent text-sm text-white placeholder-gray-400 focus:outline-none w-full font-sans"
+              className="bg-transparent text-sm text-white placeholder-gray-400 focus:outline-none w-full font-sans tracking-wide"
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* Hamburger Menu Button */}
         <motion.button
