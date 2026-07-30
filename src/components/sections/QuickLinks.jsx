@@ -147,7 +147,7 @@ export const QuickLinks = () => {
             <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
 
             <span className="relative z-10 drop-shadow-sm flex items-center justify-center gap-2">
-              PATNER RESMI BANG iYEL 🔥
+              PATNER RESMI BOS IYEL 🔥
             </span>
           </Button>
         </a>
