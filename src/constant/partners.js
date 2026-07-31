@@ -19,7 +19,7 @@ export const PARTNERS = [
   },
   {
     id: 3,
-    name: "DOXX STORE",
+    name: "DOKX STORE",
     tag: "PATNER RESMI IYEL",
     image:
       "https://res.cloudinary.com/dsqr42j4/image/upload/v1785479838/WhatsApp_Image_2026-07-31_at_06.38.39_hhfef0.jpg",
