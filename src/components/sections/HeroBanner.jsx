@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../ui/SectionWrapper";
-import bannerBg from "../../assets/platform_bosiyel.png";
+
 import { HERO_CTA } from "../../constant/links";
 
 export const HeroBanner = () => {
