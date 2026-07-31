@@ -27,17 +27,19 @@ export const PARTNERS = [
   },
   {
     id: 4,
-    name: "SLOT KOSONG",
+    name: "MARSEL STR",
     tag: "PATNER RESMI IYEL",
-    image: "https://placehold.co/150x150/000000/FFFFFF?text=STLOT+KOSONG",
-    contactLink: "#",
+    image:
+      "https://res.cloudinary.com/dsqr42j4/image/upload/v1785482646/WhatsApp_Image_2026-07-31_at_14.20.16_nehnw9.jpg",
+    contactLink: "https://wa.me/62882016454389",
   },
   {
     id: 5,
-    name: "SLOT KOSONG",
+    name: "PAPOY STR",
     tag: "PATNER RESMI IYEL",
-    image: "https://placehold.co/150x150/000000/FFFFFF?text=STLOT+KOSONG",
-    contactLink: "#",
+    image:
+      "https://res.cloudinary.com/dsqr42j4/image/upload/v1785482755/WhatsApp_Image_2026-07-31_at_14.21.03_fccxch.jpg",
+    contactLink: "https://whatsapp.com/channel/0029Vb5u4uf6GcGC4jkTUc3K",
   },
   {
     id: 6,
