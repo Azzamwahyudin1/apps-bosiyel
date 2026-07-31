@@ -15,7 +15,7 @@ export const PARTNERS = [
     tag: "PATNER RESMI IYEL",
     image:
       "https://res.cloudinary.com/dsqr42j4/image/upload/v1785383495/WhatsApp_Image_2026-07-30_at_09.27.39_nn51jr.jpg",
-    contactLink: "https://wa.me/085246087202",
+    contactLink: "https://wa.me/6285246087202",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const PARTNERS = [
     tag: "PATNER RESMI IYEL",
     image:
       "https://res.cloudinary.com/dsqr42j4/image/upload/v1785479838/WhatsApp_Image_2026-07-31_at_06.38.39_hhfef0.jpg",
-    contactLink: "https://wa.me/083177586763",
+    contactLink: "https://wa.me/6283177586763",
   },
   {
     id: 4,
