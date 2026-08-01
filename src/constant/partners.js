@@ -1,5 +1,7 @@
 // src/constants/partners.js
 
+import { image } from "framer-motion/client";
+
 export const PARTNERS = [
   {
     id: 1,
@@ -43,9 +45,10 @@ export const PARTNERS = [
   },
   {
     id: 6,
-    name: "SLOT KOSONG",
+    name: "DENZ VEMZ OFFICIAL",
     tag: "PATNER RESMI IYEL",
-    image: "https://placehold.co/150x150/000000/FFFFFF?text=STLOT+KOSONG",
+    image:
+      "https://res.cloudinary.com/dsqr42j4/image/upload/v1785559535/WhatsApp_Image_2026-08-01_at_02.56.18_g3vuyh.jpg",
     contactLink: "#",
   },
   {
@@ -60,6 +63,13 @@ export const PARTNERS = [
     name: "SLOT KOSONG",
     tag: "PARTNER RESMI IYEL",
     image: "https://placehold.co/150x150/000000/FFFFFF?text=STLOT+KOSONG",
+    contactLink: "#",
+  },
+  {
+    id: 9,
+    name: "SLOT KOSONG",
+    tag: "PARTNER REMIS IYEL",
+    image: "#",
     contactLink: "#",
   },
 ];
