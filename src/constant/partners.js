@@ -5,11 +5,11 @@ import { image } from "framer-motion/client";
 export const PARTNERS = [
   {
     id: 1,
-    name: "REKAY STORE",
+    name: "DENZ VEMZ OFFICIAL",
     tag: "PATNER RESMI IYEL",
     image:
-      "https://res.cloudinary.com/dsqr42j4/image/upload/v1785421706/copy_of_whatsapp_image_2026-07-30_at_114927_1_iktovw.jpg",
-    contactLink: "https://wa.me/62882003130966",
+      "https://res.cloudinary.com/dsqr42j4/image/upload/v1785559535/WhatsApp_Image_2026-08-01_at_02.56.18_g3vuyh.jpg",
+    contactLink: "",
   },
   {
     id: 2,
@@ -45,18 +45,19 @@ export const PARTNERS = [
   },
   {
     id: 6,
-    name: "DENZ VEMZ OFFICIAL",
+    name: "REKAY STORE",
     tag: "PATNER RESMI IYEL",
     image:
-      "https://res.cloudinary.com/dsqr42j4/image/upload/v1785559535/WhatsApp_Image_2026-08-01_at_02.56.18_g3vuyh.jpg",
-    contactLink: "#",
+      "https://res.cloudinary.com/dsqr42j4/image/upload/v1785421706/copy_of_whatsapp_image_2026-07-30_at_114927_1_iktovw.jpg",
+    contactLink: "https://wa.me/62882003130966",
   },
   {
     id: 7,
-    name: "SLOT KOSONG",
+    name: "ELUNARE STORE",
     tag: "PATNER RESMI IYEL",
-    image: "https://placehold.co/150x150/000000/FFFFFF?text=STLOT+KOSONG",
-    contactLink: "#",
+    image:
+      "https://res.cloudinary.com/dsqr42j4/image/upload/v1785650981/WhatsApp_Image_2026-08-02_at_09.45.46_k1hdtz.jpg",
+    contactLink: "https://wa.me/6283167260122",
   },
   {
     id: 8,
