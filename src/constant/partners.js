@@ -52,11 +52,10 @@ export const PARTNERS = [
   },
   {
     id: 7,
-    name: "ELUNARE STORE",
+    name: "",
     tag: "PATNER RESMI IYEL",
-    image:
-      "https://res.cloudinary.com/dsqr42j4/image/upload/v1785650981/WhatsApp_Image_2026-08-02_at_09.45.46_k1hdtz.jpg",
-    contactLink: "https://wa.me/6285697469676",
+    image: "",
+    contactLink: "",
   },
   {
     id: 8,
